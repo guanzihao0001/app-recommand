@@ -1,0 +1,55 @@
+
+DB:
+  VENDOR: postgresql
+  DRIVER: psycopg2
+  HOST: pgm-bp1f8wo290i028q8117950.pg.rds.aliyuncs.com
+  PORT: 3433
+  USER: sail_database
+  PWD: sunmiailab2019
+  DATABASE: app_recommend
+
+AMQP:
+  AMQP_USER: MjphbXFwLWNuLXN0MjF6bW9jazAwMzpMVEFJNEc5OUpzQ2taV2dMelZHVGFlUlc=
+  AMQP_PASSWORD: RjYzODZERTJDRDBEOTJCQjg1NTkwMkJBNjAzNjA4QUVBNzkwMkU0NzoxNjA5ODI1ODU1MDkz
+  AMQP_VHOST: app-recommend
+  AMQP_ADDRESS: amqp-cn-st21zmock003.mq-amqp.cn-hangzhou-249959-a-internal.aliyuncs.com
+
+SAVE_PATH: /data/app_recommend
+
+CELERY_SCHEDULE:
+  DAY_OF_MONTH: '11,26'
+  HOUR: 00
+  MINUTE: 00
+
+LOAD_MATRIX_TASK:
+  DAY_OF_MONTH: '11,26'
+  HOUR: '1'
+  MINUTE: '00'
+
+RECOMMEND:
+  NUMBER_FOR_RECOMMEND_DEFAULT: 10
+  NUMBER_FOR_RECOMMEND_MIN: 0
+  NUMBER_FOR_RECOMMEND_MAX: 50
+  NUMBER_FOR_CALCULATE: 25
+
+DATABASE:
+  DATABASE_NAME: 'app_recommend'
+  CAL_TABLE_NAME: 'ads_ai_app_usedtime_3m'
+  RECOMMEND_TABLE_NAME: 'ads_ai_app_usedtime_1m'
+  APPLIST_TABLE_NAME: 'ads_ai_app_msn_applist_nda'
+
+
+STATUS_CODE:
+  OK: 0
+  NO_HISTORY_DATA: 1
+  NO_APP_SIM_MATRIX: 2
+  NO_MODEL: 3
+
+MODEL_LIST:
+  LIST: ['MODEL_V', 'MODEL_L', 'MODEL_P', 'MODEL_T', 'MODEL_D', 'ALL']
+  MODEL_V: ['V2_PRO','V2','V1s','V1','V2s']
+  MODEL_L: ['L2','L2K','L2s']
+  MODEL_P: ['P1_4G','P1N','P2','P2_PRO','P2lite','P1','P2mini']
+  MODEL_T: ['T1','T2','T2mini','T2lite','T2mini_s','T1mini','T2s_LITE','T2s']
+  MODEL_D: ['D1','D2','D1s','D2s','D2_d','D1s_d','D2mini','D2s_LITE']
+  ALL: ['ALL']
